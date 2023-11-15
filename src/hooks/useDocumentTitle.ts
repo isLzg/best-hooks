@@ -12,7 +12,7 @@ const DEFAULT_OPTIONS: Options = {
 
 const DEFAULT_TITLE = 'Best Hooks'
 
-export const useDocumentTitle = (newTitle: string, options: Options = DEFAULT_OPTIONS) => {
+const useDocumentTitle = (newTitle: string, options: Options = DEFAULT_OPTIONS) => {
   const prevTitleRef = useRef<string>(document?.title);
 
   useEffect(() => {
@@ -33,3 +33,5 @@ export const useDocumentTitle = (newTitle: string, options: Options = DEFAULT_OP
     }
   }, [newTitle, options])
 }
+
+export default useDocumentTitle
